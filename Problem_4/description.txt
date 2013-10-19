@@ -1,0 +1,88 @@
+Organic Carrots
+Little Jack has finally completed his school education, and has taken up his dream job in the organic vegetable trade. Today, he has purchased a rather large whole-sale batch of carrots from some local farmers, and needs to pack them up into bags of fixed weight, which he will then sell to retail stores. However, the task is not as easy as it sounds, since the carrots differ in weight, making the packing process a nightmare… Try to help Jack out as best you can!
+
+Jack can sell carrots in bags of 500g, 1kg, or 5kg, each. The price at which the carrots sell depends on the size of the bag, as described in the “Scoring” section below. The total weight of the carrots which are packed into a bag can never be smaller than the weight declared on the wrapping. The weight of a single carrot in Jack's batch may vary from 50g to 200g.
+
+Input
+
+The input data starts with a line containing a single integer n, which denotes the total number of carrots purchased by Jack (1<=n<=10000). The next n lines of input contain a single number, each, describing the weights of successive carrots in the batch, expressed in grams. These are within the range 50.00 to 200.00, and are always expressed with a precision of two digits of precision after the decimal point.
+
+Output
+
+In each line of output, print a description of a single bag of carrots which Jack should pack. Start each line with one of the strings: 500g, 1kg, or 5kg, denoting the declared weight of the bag. Follow this string by a single space character, and by the weights of the carrots to be placed in the bag, separated by single spaces. The total weight of all the carrots in the bag cannot be smaller than the declared weight, and you cannot place any carrot in more than one bag.
+
+Scoring
+
+Your program will be tested for multiple data sets. The score you receive will be the mean (average) profit made by Johnny (expressed in Euros), taken over all the datasets. This will then be scaled so that the contestant with the highest score receives 10 points in the contest, and all other contestants receive proportionally fewer points.
+
+For every dataset, the profit made by Johnny is calculated as follows. For each 500g bag of carrots packed, Jack will gross 50 cents. For each 1kg bag of carrots, he will receive 99 cents. Finally, for each 5kg bag of carrots, he will receive 4.89 euros. To calculate Jack’s profit, you need to subtract from the total sales revenue the price paid by Jack to his suppliers – namely, 90 cents per kilogram of carrots. Note that this is a fixed cost over which you have no control, and that carrots which are left unpacked do not contribute to the sales revenue, but have to be paid for, anyway. If you make a loss on a data set, this will be counted as a profit of 0 euros.
+
+Notes
+
+1. The time limit of your program for each data set is 5 seconds. In all datasets, the number of carrots is very close to 10000.
+
+2. Remember that the limit of 255 submissions per contestant per problem also applies to this problem. Your best submission will always count.
+
+3. To add an element of suspense, the leader board will be frozen during the last 24 hours of the contest. The final results will only be announced at the end of the contest.
+
+========
+
+Example
+
+Sample test 1 
+
+Input:
+
+6
+200.00
+195.00
+150.00
+172.00
+150.00
+140.00
+Output:
+
+500g 200.00 150.00 150.00
+500g 172.00 195.00 140.00
+Evaluation:
+
+Sales revenue: 2 bags * 0.50eur/bag = 1.00eur
+
+Expenses: 1.07kg * 0.90eur/kg = 0.963eur
+
+Score:
+0.037
+
+Sample test 2
+
+Input:
+
+9
+150.00
+150.00
+150.00
+150.00
+150.00
+150.00
+50.00
+50.00
+50.00
+Output:
+
+1kg 150.00 150.00 150.00 150.00 150.00 150.00 50.00 50.00
+Evaluation:
+
+Sales revenue: 1 bag * 0.99eur/bag = 0.99eur
+
+Expenses: 1.05kg * 0.90eur/kg = 0.945eur
+
+Score:
+0.045
+
+ 
+
+Total score for tests 1 and 2:
+0.082
+
+
+Note: the solution to Sample test 1 is optimal; the solution to Sample test 2 is not. Instead of a single 1kg bag, it would have been possible to pack two bags of 500g, making Jack one cent more.
