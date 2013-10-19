@@ -1,0 +1,49 @@
+Balanced Art
+Little Jack is interested in a particularly obscure form of modern art, which involves artistic compositions of pan balances (scales). The entire art form is supported by one large balance. On each of the pans of this balance, one may either place a fixed weight of several kilograms, or yet another balance. The latter balances will have more weights or balances placed on them, and so on. We assume that the weight of an empty balance is treated as negligible.
+
+Jack has adopted the following convenient notation to denote such an artistic composition using numbers, brackets, and commas, as follows: [L,R] , where each of the symbols L and R denotes the contents of one of the pans of the balance, and may be:
+
+A positive integer from the range 1 to 109, representing a weight of the given mass, expressed in kilograms,
+A question mark (?), which stands for a weight of unknown strictly positive mass, which is always a multiple of 1 kg (and may be arbitrarily large),
+Notation for an artistic composition, representing another balance placed on the pan.
+Jack has presented you with several designs of his artistic balance compositions, some of which may contain question marks. Your task is to determine if it is possible to choose the unknown weights represented by question marks so that all of the balances within the artistic composition are balanced (i.e., in a state of equilibrium).
+
+Input
+
+The input starts with a positive integer t, representing the number of compositions presented by Jack (t<=10). Each of the following t lines contains a description of one composition, expressed in Jack’s notation. The length of the notation does not exceed 106 characters in any line.
+
+Output
+
+For successive compositions provided at input, write to output a line containing the single word YES, if it is possible to balance the given composition, or the word NO, otherwise.
+
+========
+
+Example
+
+Input:
+
+5
+[3,?]
+[?,[?,?]]
+[[[?,?],5],?]
+[2,[3,?]]
+[[[5,?],10],[?,?]]
+Output:
+
+YES
+YES
+NO
+NO
+YES
+Explanation of example:
+
+Composition 1 can be filled in as follows: [3,3]
+
+Composition 2 can be filled in in different ways, e.g., as follows: [4,[2,2]]
+
+Composition 3 is impossible to fill in, since the only way to achieve this would be to use two weights of 2.5kg, and weights must have integer mass by assumption.
+
+Composition 4 is impossible to fill in, since the right pan of the main balance already will way more than 3kg, while the left pan weighs 2kg.
+
+Composition 5 can be filled in as follows: [[[5,5],10],[10,10]]
+
