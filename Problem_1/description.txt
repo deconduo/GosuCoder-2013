@@ -1,0 +1,31 @@
+Amusing Sums
+Little Jack was getting really bored during his Math class, and so his teacher asked him to solve some additional problems. Jack was given an assignment sheet with some numbers written on it. Jack’s task is to figure out if the given number is a palindrome, i.e., a number which stays the same when read from left to right or from right to left. If not, Jack should add the value of the number read from left to right and its value read from right to left, and check if the obtained sum is a palindrome. If not, he should continue the process, until he eventually obtains a palindrome.
+
+For instance, given the number 37, Jack will come to the conclusion that it is not a palindrome and so he will perform the addition: 37 + 73 = 110. The number 110 is not a palindrome, either, so he will proceed to perform another sum: 110 + 011 = 110 + 11 = 121. The obtained result is a palindrome, so Jack’s work is done.
+
+Your task is to write a program which, for each of the numbers considered by Jack, will print the palindrome he eventually obtains, as well as the number of addition operations leading to this result.
+
+Input
+
+The first line of input contains an integer t (t < 100), which corresponds to the number of problems Jack was asked to solve. Each of the next t lines contains exactly one integer n (1 <= n <= 80), for which Jack should perform his calculations.
+
+Output
+
+For each of the numbers given at input, print one line containing two integers, separated by a space. The first should be the palindrome obtained by Jack, while the second – the number of addition operations required to obtain it.
+
+========
+
+Example
+
+Sample input:
+
+3
+37
+68
+7
+
+Sample output:
+
+121 2
+1111 3
+7 0
